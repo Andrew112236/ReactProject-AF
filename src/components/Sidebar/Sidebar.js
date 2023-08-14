@@ -10,7 +10,6 @@ function Sidebar() {
       <Menu />
       <div className="username">
         <BiSolidUserCircle className="username__icon" />
-        <p className="username__text">Bill Gates</p>
       </div>
     </div>
   );

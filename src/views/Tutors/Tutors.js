@@ -1,5 +1,5 @@
 import React from "react";
-import Paper from "../../components/Paper";
+import Paper from "../../components/Paper/Paper";
 import Tutor from "../../components/Tutor/Tutor";
 import Button from "../../components/Button/Button";
 

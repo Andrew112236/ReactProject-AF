@@ -1,5 +1,5 @@
 import React from "react";
-import Paper from "../../components/Paper";
+import Paper from "../../components/Paper/Paper";
 import university from "../../assets/university.png";
 
 import { HiPencilAlt } from "react-icons/hi";

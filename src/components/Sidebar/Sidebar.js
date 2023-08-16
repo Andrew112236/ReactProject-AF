@@ -8,9 +8,10 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__block" />
       <Menu />
-      <div className="username">
+      {/* <div className="username">
         <BiSolidUserCircle className="username__icon" />
-      </div>
+        <p className="username__text">Bill Gates</p>
+      </div> */}
     </div>
   );
 }

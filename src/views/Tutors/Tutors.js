@@ -48,7 +48,7 @@ export default function Tutors({ data }) {
       <Button
         icon={<AiFillPlusCircle />}
         text={"ADD TUTOR"}
-        declansator={onShowForm}
+        onClick={onShowForm}
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Paper from "../../components/Paper/Paper";
 import Tutor from "../../components/Tutor/Tutor";
 import Button from "../../components/Button/Button";
@@ -9,7 +9,7 @@ import style from "./Tutors.module.css";
 import TutorForm from "../../components/Forms/TutorForm/TutorForm";
 
 export default function Tutors({ data }) {
-  const [tutors, setTutors] = useState(data);
+  const [tutors, setTutors] = useState();
   const [showForm, setShowForm] = useState(false);
 
   const onShowForm = () => {
@@ -21,10 +21,21 @@ export default function Tutors({ data }) {
     setShowForm(false);
   };
 
+  // local storage pentru pastrarea datelor introduse
+
+  useEffect(() => {
+    const tutorsLocalStorage = JSON.parse(localStorage.getItem("tutors"));
+    setTutors(tutorsLocalStorage);
+  });
+
+  useEffect(() => {
+    if (tutors) localStorage.setItem("tutors", JSON.stringify(tutors));
+  }, [tutors]);
+
   return (
     <div className={style.tutors}>
       <h1>Tutors</h1>
-      {tutors.map((tutor, index) => {
+      {tutors?.map((tutor, index) => {
         return (
           <Paper key={index}>
             <Tutor

@@ -20,6 +20,7 @@ export default function TutorForm({ onAddTutor }) {
     console.log(formData);
     onAddTutor(formData);
   };
+
   return (
     <div className={style.container}>
       <h4>Add Tutor</h4>
